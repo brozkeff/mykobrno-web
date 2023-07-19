@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'SB Body';
+    src: local('Work Sans Regular'), local('WorkSans-Regular'),
+        url('../fonts/WorkSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB Body';
+    src: local('Work Sans Bold'), local('WorkSans-Bold'),
+        url('../fonts/WorkSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB Body';
+    src: local('Work Sans Italic'), local('WorkSans-Italic'),
+        url('../fonts/WorkSans-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
