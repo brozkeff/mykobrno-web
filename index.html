@@ -6,8 +6,9 @@
         <meta name="description" content="Mykologický klub Brno: Sdružujeme profesionální i amatérské mykology z Brna a okolí.">
         <meta name="author" content="Mykologický klub Brno, Martin Malec - brozkeff.net">
         <title>Mykologický klub Brno</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <script src="assets/vendor/fontawesome/6.7.2/all.min.js" integrity="sha384-DsXFqEUf3HnCU8om0zbXN58DxV7Bo8/z7AbHBGd2XxkeNpdLrygNiGFr/03W0Xmt"></script>
+        <!-- Bootstrap CSS and original theme -->
+        <link href="assets/vendor/bootstrap/5.3.8/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB">
         <link href="css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="css/heading.css">
         <link rel="stylesheet" href="css/body.css">
@@ -16,13 +17,23 @@
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
             <div class="container"><a class="navbar-brand js-scroll-trigger" href="#page-top">Mykologický klub Brno</a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
+                <button class="navbar-toggler fw-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#akce">
                                 AKCE
                             </a>
+                        </li>
+                        <li class="nav-item dropdown mx-0 mx-lg-1">
+                            <button class="nav-link dropdown-toggle py-3 px-0 px-lg-3 rounded" id="eventMenu" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                NAŠE AKCE
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="eventMenu">
+                                <li><button class="dropdown-item text-wrap" type="button" data-bs-toggle="modal" data-bs-target="#portfolioModal0">Vycházky, odemykání a zamykání lesa</button></li>
+                                <li><button class="dropdown-item text-wrap" type="button" data-bs-toggle="modal" data-bs-target="#portfolioModal1">Odborné přednášky</button></li>
+                                <li><button class="dropdown-item text-wrap" type="button" data-bs-toggle="modal" data-bs-target="#portfolioModal2">Podzimní výstava hub</button></li>
+                            </ul>
                         </li>
                         <li class="nav-item mx-0 mx-lg-1">
                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#o-nas">
@@ -49,7 +60,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
 
-                <p class="pre-wrap masthead-subheading font-weight-light mb-0">Sdružujeme profesionální i amatérské mykology z&nbsp;Brna a okolí.</p>
+                <p class="pre-wrap masthead-subheading fw-light mb-0">Sdružujeme profesionální i amatérské mykology z&nbsp;Brna a okolí.</p>
             </div>
         </header>
         <section class="page-section portfolio" id="akce">
@@ -68,7 +79,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
+                        <div class="portfolio-item mx-auto" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#portfolioModal0">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="assets/img/akce/odemykanilesa.jpg" alt="Vycházky, odemykání a zamykání lesa"/>
@@ -76,7 +87,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                        <div class="portfolio-item mx-auto" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="assets/img/akce/prednasky.jpg" alt="Přednášky"/>
@@ -84,7 +95,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
+                        <div class="portfolio-item mx-auto" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="assets/img/akce/vystavahub2026-1.jpg" alt="Výstava hub"/>
@@ -95,16 +106,16 @@
             </div>
         </section>
 
-        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal0Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal0" tabindex="-1" role="dialog" aria-labelledby="portfolioModal0Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
                     <div class="modal-body text-center">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
 
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Odemykání a zamykání lesa</h2>
+                                    <h2 id="portfolioModal0Label" class="portfolio-modal-title text-secondary mb-0">Odemykání a zamykání lesa</h2>
                     
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -114,7 +125,7 @@
                                     <img class="img-fluid rounded mb-5" src="assets/img/akce/odemykanilesa2012.jpg" alt="Odemykání a zamykání lesa"/>
                                     
                                     <p class="mb-5">Každým rokem na jaře a na podzim pořádáme mykologické vycházky při příležitostech „odemykání“ a „zamykání“ lesa. Kromě toho je tradicí v&nbsp;zimě i tzv. „mykosvařák“ ve městě pro vzájemnou socializaci i v&nbsp;době, kdy toho už v&nbsp;lese moc neroste, případně „mykopivo“ i  v jiných obdobích. Pozvánky posíláme zájemcům e-mailem, napište nám, pokud chcete přidat do našeho mailing-listu pozvánek na tyto i další akce.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Zavřít okno</button>
+                                    <button class="btn btn-primary" href="#" data-bs-dismiss="modal"><i class="fas fa-times fa-fw"></i>Zavřít okno</button>
                                 </div>
                             </div>
                         </div>
@@ -122,16 +133,16 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal1Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
                     <div class="modal-body text-center">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
 
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Přednášky</h2>
+                                    <h2 id="portfolioModal1Label" class="portfolio-modal-title text-secondary mb-0">Přednášky</h2>
                     
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -146,7 +157,7 @@
                                     <p class="mb-5">Pozvánky na jednotlivé akce posíláme zájemcům e-mailem.</p>
 
                                     <p class="mb-5">Přehled přednášek 2026:</p>
-                                    <ul class="mb-5 text-left small">
+                                    <ul class="mb-5 text-start small">
                                         <li><date>20. ledna 2026:</date>
                                             <em>Mgr. Hana Ševčíková, Ph.D. (Botanické oddělení, Moravské zemské muzeum, Brno):</em>
                                             <strong>Voskovky, štítovky a jiné barevné krásky v novém Červeném seznamu hub</strong>
@@ -179,7 +190,7 @@
 
                                     <!-- 2025 BEGIN --
                                     <p class="mb-5">Přehled přednášek 2025:</p>
-                                    <ul class="mb-5 text-left small">
+                                    <ul class="mb-5 text-start small">
                                         <li><date>21. ledna 2025:</date>
                                             <em>Prof. RNDr. Michal Tomšovský, Ph.D. (Ústav ochrany lesů a myslivosti, Mendelova univerzita, Brno):</em>
                                             <strong>Houby a nehouby na dřevinách</strong>
@@ -212,7 +223,7 @@
 
                                     <!-- 2024 BEGIN --
                                     <p class="mb-5">Přehled přednášek 2024:</p>
-                                    <ul class="mb-5 text-left small">
+                                    <ul class="mb-5 text-start small">
                                         <li>30. ledna 2024: Mgr. Jan Holec, Dr. (Mykologické oddělení, Národní muzeum, Praha): Houby Zámeckého lesa u Železné Rudy</li>
                                         <li>13. února 2024: Doc. RNDr. Jiří Gabriel, DrSc. (Mikrobiologický ústav AV ČR, v.v.i., Praha): Houby - jejich cesta dějinami a přínos pro člověka</li>
                                         <li>27. února 2024: Mgr. Lucie Zíbarová (Ústí nad Labem): Houby povstalé z popela Českého Švýcarska</li>
@@ -225,7 +236,7 @@
 
                                    <!-- 2023 BEGIN --                          
                                     <p class="mb-5">Přehled přednášek 2023:</p>
-                                    <ul class="mb-5 text-left small">
+                                    <ul class="mb-5 text-start small">
                                         <li>7. února 2023 — Mgr. Hana Ševčíková a RNDr. Vladimír Antonín, CSc. (Botanické oddělení, Moravské zemské muzeum, Brno): Příroda a houby ostrova Madeira a jejich ochrana</li>
                                         <li>21. února 2023 — Mgr. Hana Ševčíková (Botanické oddělení, Moravské zemské muzeum, Brno): Vzácné, endemické a nové druhy hub ostrova Madeira</li>
                                         <li>7. března 2023 — Mgr. Daniel Dvořák (Ústav botaniky a zoologie PřF MU, Brno): Mykobiota Jeseníků – stav poznání a zajímavé nálezy</li>
@@ -235,7 +246,7 @@
                                     </ul>
                                     -- 2023 END -->
 
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Zavřít okno</button>
+                                    <button class="btn btn-primary" href="#" data-bs-dismiss="modal"><i class="fas fa-times fa-fw"></i>Zavřít okno</button>
                                 </div>
                             </div>
                         </div>
@@ -243,16 +254,16 @@
                 </div>
             </div>
         </div>
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="#portfolioModal2Label" aria-hidden="true">
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
+                    <button class="close" type="button" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fas fa-times"></i></span></button>
                     <div class="modal-body text-center">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
 
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Výstavy</h2>
+                                    <h2 id="portfolioModal2Label" class="portfolio-modal-title text-secondary mb-0">Výstavy</h2>
                     
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -265,7 +276,7 @@
                                         Minulé ročníky: <a href="http://www.mzm.cz/aktuality-1/xii-vystava-hub">12. ročník</a> proběhl v termínu 24.-26.9.2022, 13. ročník proběhl v termínu 16.-18.9.2023, 14. ročník proběhl v pozdějším termínu 19.-21.10.2024, 15. ročník opět později 4.-6.10.2025. <br>
                                         Pro termíny dalších výstav sledujte <a href="http://www.mzm.cz/aktuality-1">aktuality Moravského zemského muzea</a> případně jejich <a href="http://www.mzm.cz/kalendar">kalendář akcí</a>. Přehled dalších výstav hub i v jiných městech pak zpravidla najdete jako aktualitu na <a href="https://www.myko.cz/">stránkách České mykologické společnosti</a>. (Příklad: <a href="https://www.myko.cz/clanek2147/">Výstavy hub 2022</a>).</p>
                                         <p class="mb-5"><a href="https://www.kudyznudy.cz/?utm_source=kzn&utm_medium=partneri_kzn&utm_campaign=banner" title="Kudyznudy.cz podporuje brněnskou mykologickou výstavu"> <img src="assets/img/kudyznudy.png" width="200"  height="44" border="0" alt="Kudyznudy.cz podporuje brněnskou mykologickou výstavu">&nbsp; Děkujeme Kudyznudy.cz za propagaci výstavy.</a></p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Zavřít okno</button>
+                                    <button class="btn btn-primary" href="#" data-bs-dismiss="modal"><i class="fas fa-times fa-fw"></i>Zavřít okno</button>
                                 </div>
                             </div>
                         </div>
@@ -289,11 +300,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-7 ml-auto">
+                    <div class="col-lg-7 ms-auto">
                         <p class="lead">
                         Mykologický klub Brno je dobrovolné zájmové sdružení lidí se zájmem o přírodu, houby a mykologii. Členové klubu jsou jednak mykologové a vědečtí pracovníci, tak praktičtí houbaři. Jedno máme společné, a to je láska k&nbsp;přírodě a zájem poznávat krásu a rozmanitost hub. Jsme dobrovolné sdružení a rádi mezi sebou uvítáme každého zájemce, který rád chodí na houby ve&nbsp;společnosti stejně zapálených nadšenců, rád pozná nové druhy hub od kamarádů mykologů. Proto jednou z&nbsp;našich činností jsou společné vycházky a exkurze. </p>
                     </div>
-                    <div class="col-lg-5 mr-auto">
+                    <div class="col-lg-5 me-auto">
                         <p class="lead">Na jaře se pravidelně zúčastňujeme přednášek brněnské pobočky České vědecké společnosti pro mykologii a Botanického oddělení Moravského zemského muzea. Houbařský lid potřebuje diskutovat, proto po přednáškách chodíme na „mykopivo“. Mykologický klub Brno pořádá v&nbsp;rámci osvěty na podzim velkou výstavu právě rostoucích hub. </p>
 
                     </div>
@@ -318,14 +329,14 @@
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-3"><i class="fas fa-mobile-alt"></i></div>
                             <div class="text-muted">Telefon</div>
-                            <div class="lead font-weight-bold">+420 777 482 093</div>
+                            <div class="lead fw-bold">+420 777 482 093</div>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="d-flex flex-column align-items-center">
                             <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
                             <div class="text-muted">Email</div>
-                            <div class="lead font-weight-bold">hsevcikova zavináč mzm.cz</div>
+                            <div class="lead fw-bold">hsevcikova zavináč mzm.cz</div>
                         </div>
                     </div>
                 </div>
@@ -346,7 +357,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-11 ml-auto">
+                    <div class="col-lg-11 ms-auto">
+                        <p>
+                            <strong><date>12.10.2026</date>:</strong>
+                            Modernizovali jsme náš web. Podrobnosti o vycházkách, přednáškách a výstavě hub nyní otevřete přímo z nabídky „Naše akce“ v horním menu. Vzhled i obsah stránek zůstávají zachovány.
+                        </p>
                         <p>
                             <strong><date>12.10.2026</date>:</strong>
                             Zveme na XVI. podzimní výstavu hub v KVIC Brno-Vinohrady od soboty do pondělí 24.-26.10.2026.
@@ -414,9 +429,9 @@
 
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="mb-4">Odkazy</h4>
-                        <p class="lead text-left"><a class="btn btn-outline-light btn-social mx-4" href="https://www.facebook.com/groups/makromycetes" title="Facebook"><i class="fab fa-fw fa-facebook-f"></i></a><a href="https://www.facebook.com/groups/makromycetes">FB poradna</a></p>
-                        <p class="lead text-left"><a class="btn btn-outline-light btn-social mx-4" href="https://www.myko.cz/" title="Česká mykologická společnost"><i class="fas fa-fw fa-earth-europe"></i></a><a href="https://www.myko.cz/">Č.mykologická spol.</a></p>
-                        <p class="lead text-left"><a class="btn btn-outline-light btn-social mx-4" href="https://www.youtube.com/channel/UCQzeIuuyk50j-xO21QQxpPg" title="Youtube ČMS"><i class="fab fa-fw fa-youtube"></i></a><a href="https://www.youtube.com/channel/UCQzeIuuyk50j-xO21QQxpPg">Youtube ČMS</a></p>
+                        <p class="lead text-start"><a class="btn btn-outline-light btn-social mx-4" href="https://www.facebook.com/groups/makromycetes" title="Facebook"><i class="fab fa-fw fa-facebook-f"></i></a><a href="https://www.facebook.com/groups/makromycetes">FB poradna</a></p>
+                        <p class="lead text-start"><a class="btn btn-outline-light btn-social mx-4" href="https://www.myko.cz/" title="Česká mykologická společnost"><i class="fas fa-fw fa-earth-europe"></i></a><a href="https://www.myko.cz/">Č.mykologická spol.</a></p>
+                        <p class="lead text-start"><a class="btn btn-outline-light btn-social mx-4" href="https://www.youtube.com/channel/UCQzeIuuyk50j-xO21QQxpPg" title="Youtube ČMS"><i class="fab fa-fw fa-youtube"></i></a><a href="https://www.youtube.com/channel/UCQzeIuuyk50j-xO21QQxpPg">Youtube ČMS</a></p>
                     </div>
 
                     <div class="col-lg-4">
@@ -430,24 +445,12 @@
         </footer>
 
         <section class="copyright py-4 text-center text-white">
-            <div class="container"><small class="pre-wrap">Mykologický klub Brno. <strong>Web:</strong> <a href="https://martim.cz">Martin «Brozkeff» Malec</a>. <strong>Šablona webu:</strong> Freelance by Start Bootstrap (MIT license).</small></div>
+            <div class="container"><small class="pre-wrap">Mykologický klub Brno. <strong>Web:</strong> <a href="https://martim.cz">Martin «Brozkeff» Malec</a>. <strong>Šablona webu:</strong> Freelance by Start Bootstrap (<a href="assets/vendor/freelancer/LICENSE">MIT license</a>). <strong>Modernizace:</strong> Brozkeff 2026.</small></div>
         </section>
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top" title="Vrátit se nahoru"><i class="fa fa-chevron-up"></i></a></div>
-        <!-- Bootstrap core JS-->
-        
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
-
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        
-        <!-- Third party plugin JS-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js" integrity="sha384-leGYpHE9Tc4N9OwRd98xg6YFpB9shlc/RkilpFi0ljr3QD4tFoFptZvgnnzzwG4Q" crossorigin="anonymous"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
+        <!-- Bootstrap JS and native theme behavior -->
+        <script src="assets/vendor/bootstrap/5.3.8/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
